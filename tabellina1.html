@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(236, 110, 110); 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+#mioOutput {
+
+    font-size:30px;
+    color: rgb(63, 63, 189);
+}
+</style>
+
+</head>
+<body>
+
+    <button class="button button1" onclick="tabellina()">   Test Funzione    </button>
+
+    <p id="mioOutput">...........</p>
+<script>
+
+     function tabellina() {
+        
+
+        var n=2;
+        var out="";
+        for(let i=1;i<=10;i++)
+            {
+                out=out+" "+ i*n;
+            }
+        document.getElementById("mioOutput").innerHTML=out;
+         
+     }
+
+
+
+</script>
+
+    
+</body>
+</html>
