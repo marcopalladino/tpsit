@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      body {
+        margin-top: 400px;
+        background-color: #1982c4;
+        text-align: center;
+      }
+      button {
+        width: 50px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: #ffca3a;
+        border: 0px;
+      }
+      button:hover {
+        background-color: #6a4c93;
+      }
+      #box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: #8ac926;
+        border-radius: 25px;
+        box-shadow: 10px 10px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="animate__animated animate__backInDown">
+      Premere il pulsante entro un secondo per far cambiare il colore
+      all'oggetto
+    </h2>
+    <div id="box" class="animate__animated animate__bounce animate__repeat-2">
+      <button onclick="changeColor()">Premi</button>
+    </div>
+
+    <script>
+      let tempo = Date.now();
+
+      function changeColor() {
+        let tempoAggiornato = (Date.now() - tempo) / 1000;
+        if (tempoAggiornato < 1) {
+          document.getElementById("box").style.backgroundColor = "red";
+          alert("Hai vinto.");
+        } else {
+          alert("Hai perso.");
+        }
+      }
+    </script>
+  </body>
+</html>
